@@ -1,6 +1,10 @@
 import sys
 
 path_arquivo = sys.argv[1]
+if not path_arquivo.endswith(".java") and not path_arquivo.endswith(".c"):
+    print("Você não selecionou um arquivo .java ou .c")
+    sys.exit(0)
+
 linhas = list()
 
 try:
@@ -14,5 +18,12 @@ except IOError:
     sys.exit(0)
 
 for linha in linhas:
-    for char in linha:
-        print(char)
+    if linha == "":
+        print("Linha Vazia")
+    else:
+        blocos = linha.split()
+        if "//" in blocos:
+            print("Comentário")
+            continue
+        else:
+            print(blocos)
