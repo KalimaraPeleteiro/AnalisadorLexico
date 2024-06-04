@@ -13,7 +13,9 @@ printf,Identificador,11
 scanf,Identificador,12
 &num2,Ponteiro,12
 soma,Identificador,15
+=,Operador,15
 num1,Identificador,15
++,Operador,15
 num2,Identificador,15
 printf,Identificador,18
 num1,Identificador,18

@@ -16,6 +16,10 @@ DIRETIVAS_C = {
     '#error', '#pragma', '#line', '#'
 }
 
+OPERADORES_C = {
+    "+", "=", "-", "*", "/", "//", "!="
+}
+
 PAUSADORES = {'(', ')', ',', ';', '"', '=', '+', ' '}
 
 
@@ -41,11 +45,15 @@ def analisador(linhas):
 
         for char in linha:
 
+            # Valores entre String são pulados
             if char == '"':
                 literal_string = not literal_string
 
             if literal_string is True:
                 continue
+        
+            if char in OPERADORES_C:
+                palavras.append({"Token": char, "Linha": linha_atual})
 
             if char not in PAUSADORES:  # Elementos que separam Tokens
                 token.append(char)
@@ -70,6 +78,9 @@ def analisador(linhas):
                 escritor.writerow(data)
             elif elemento["Token"] in DIRETIVAS_C:
                 data = [elemento["Token"], "Diretiva do Processador", elemento["Linha"]]
+                escritor.writerow(data)
+            elif elemento["Token"] in OPERADORES_C:
+                data = [elemento["Token"], "Operador", elemento["Linha"]]
                 escritor.writerow(data)
             elif elemento["Token"].startswith("&"):
                 data = [elemento["Token"], "Ponteiro", elemento["Linha"]]
