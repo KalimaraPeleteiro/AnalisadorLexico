@@ -72,25 +72,29 @@ def analisador(linhas):
         escritor = csv.writer(arquivo_csv)
         escritor.writerow(['Lexema', 'Tipo de Token', 'Linha do Elemento'])
 
-        for elemento in palavras:
-            if elemento["Token"] in PALAVRAS_RESERVADAS_C:
-                data = [elemento["Token"], "Palavra Reservada", elemento["Linha"]]
-                escritor.writerow(data)
-            elif elemento["Token"] in DIRETIVAS_C:
-                data = [elemento["Token"], "Diretiva do Processador", elemento["Linha"]]
-                escritor.writerow(data)
-            elif elemento["Token"] in OPERADORES_C:
-                data = [elemento["Token"], "Operador", elemento["Linha"]]
-                escritor.writerow(data)
-            elif elemento["Token"].startswith("&"):
-                data = [elemento["Token"], "Ponteiro", elemento["Linha"]]
-                escritor.writerow(data)
-            elif elemento["Token"].isdigit():
-                data = [elemento["Token"], "Literal Inteiro", elemento["Linha"]]
-                escritor.writerow(data)
-            else:
-                data = [elemento["Token"], "Identificador", elemento["Linha"]]
-                escritor.writerow(data)
+        with open("tabela_identificadores.csv", 'w', newline='') as identificador_csv:
+            escritor_identificador = csv.writer(identificador_csv)
+            escritor_identificador.writerow(['Lexema', 'Tipo de Token', 'Linha do Elemento'])
+
+            for elemento in palavras:
+                if elemento["Token"] in PALAVRAS_RESERVADAS_C:
+                    data = [elemento["Token"], "Palavra Reservada", elemento["Linha"]]
+                    escritor.writerow(data)
+                elif elemento["Token"] in DIRETIVAS_C:
+                    data = [elemento["Token"], "Diretiva do Processador", elemento["Linha"]]
+                    escritor.writerow(data)
+                elif elemento["Token"] in OPERADORES_C:
+                    data = [elemento["Token"], "Operador", elemento["Linha"]]
+                    escritor.writerow(data)
+                elif elemento["Token"].startswith("&"):
+                    data = [elemento["Token"], "Ponteiro", elemento["Linha"]]
+                    escritor.writerow(data)
+                elif elemento["Token"].isdigit():
+                    data = [elemento["Token"], "Literal Inteiro", elemento["Linha"]]
+                    escritor.writerow(data)
+                else:
+                    data = [elemento["Token"], "Identificador", elemento["Linha"]]
+                    escritor_identificador.writerow(data)
 
 
 

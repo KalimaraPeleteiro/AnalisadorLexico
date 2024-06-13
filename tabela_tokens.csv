@@ -1,25 +1,10 @@
 Lexema,Tipo de Token,Linha do Elemento
 #include,Diretiva do Processador,1
 int,Palavra Reservada,3
-main,Identificador,3
 int,Palavra Reservada,4
-num1,Identificador,4
-num2,Identificador,4
-soma,Identificador,4
-printf,Identificador,7
-scanf,Identificador,8
 &num1,Ponteiro,8
-printf,Identificador,11
-scanf,Identificador,12
 &num2,Ponteiro,12
-soma,Identificador,15
 =,Operador,15
-num1,Identificador,15
 +,Operador,15
-num2,Identificador,15
-printf,Identificador,18
-num1,Identificador,18
-num2,Identificador,18
-soma,Identificador,18
 return,Palavra Reservada,20
 0,Literal Inteiro,20
