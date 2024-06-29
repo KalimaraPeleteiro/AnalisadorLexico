@@ -1,0 +1,50 @@
+Lexema,Tipo de Token,Linha do Elemento
+package,Palavra Reservada,1
+package,Palavra Reservada,1
+import,Palavra Reservada,3
+import,Palavra Reservada,3
+public,Palavra Reservada,6
+public,Palavra Reservada,6
+class,Palavra Reservada,6
+class,Palavra Reservada,6
+public,Palavra Reservada,7
+public,Palavra Reservada,7
+static,Palavra Reservada,7
+static,Palavra Reservada,7
+void,Palavra Reservada,7
+void,Palavra Reservada,7
+=,Operador,8
+new,Palavra Reservada,8
+new,Palavra Reservada,8
+double,Palavra Reservada,11
+double,Palavra Reservada,11
+=,Operador,11
+double,Palavra Reservada,14
+double,Palavra Reservada,14
+=,Operador,14
+double,Palavra Reservada,17
+double,Palavra Reservada,17
+=,Operador,17
+double,Palavra Reservada,19
+double,Palavra Reservada,19
+=,Operador,19
++,Operador,20
+public,Palavra Reservada,25
+public,Palavra Reservada,25
+static,Palavra Reservada,25
+static,Palavra Reservada,25
+double,Palavra Reservada,25
+double,Palavra Reservada,25
+double,Palavra Reservada,25
+double,Palavra Reservada,25
+double,Palavra Reservada,25
+double,Palavra Reservada,25
+double,Palavra Reservada,25
+double,Palavra Reservada,25
+return,Palavra Reservada,26
+return,Palavra Reservada,26
++,Operador,26
++,Operador,26
+/,Operador,26
+/,Operador,26
+3,Literal Inteiro,26

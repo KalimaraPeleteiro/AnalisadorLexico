@@ -1,8 +1,12 @@
 Lexema,Tipo de Token,Linha do Elemento
 #include,Diretiva do Processador,1
+<,Operador,1
+>,Operador,1
 int,Palavra Reservada,3
 int,Palavra Reservada,4
+&,Operador,8
 &num1,Ponteiro,8
+&,Operador,12
 &num2,Ponteiro,12
 =,Operador,15
 +,Operador,15

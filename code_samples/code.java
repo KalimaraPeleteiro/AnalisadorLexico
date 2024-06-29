@@ -2,6 +2,7 @@ package code_samples;
 
 import java.util.Scanner;
 
+// Comentário
 public class code {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
